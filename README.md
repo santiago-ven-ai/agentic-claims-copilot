@@ -1,7 +1,7 @@
 # agentic-claims-copilot
 
-[![CI](https://github.com/Codemonster808/agentic-claims-copilot/actions/workflows/ci.yml/badge.svg)](https://github.com/Codemonster808/agentic-claims-copilot/actions/workflows/ci.yml)
-[![Coverage >= 25%](https://img.shields.io/badge/coverage-%E2%89%A525%25-brightgreen)](https://github.com/Codemonster808/agentic-claims-copilot/actions/workflows/ci.yml)
+[![CI](https://github.com/santiago-ven-ai/agentic-claims-copilot/actions/workflows/ci.yml/badge.svg)](https://github.com/santiago-ven-ai/agentic-claims-copilot/actions/workflows/ci.yml)
+[![Coverage >= 25%](https://img.shields.io/badge/coverage-%E2%89%A525%25-brightgreen)](https://github.com/santiago-ven-ai/agentic-claims-copilot/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 An agentic retrieval loop for insurance/fintech claims — plan, retrieve, observe, retry, under a hard token budget — orchestrated with Step Functions.
@@ -132,7 +132,7 @@ Both precision numbers are modest in absolute terms (0.13–0.17, not 0.8+). Tha
 ## Installation
 
 ```bash
-git clone https://github.com/Codemonster808/agentic-claims-copilot.git
+git clone https://github.com/santiago-ven-ai/agentic-claims-copilot.git
 cd agentic-claims-copilot
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements-dev.txt   # app deps + lint/type/security tooling
@@ -171,8 +171,8 @@ See [`docs/RUNBOOK.md`](docs/RUNBOOK.md) to run the flow, or [`docs/BUILD_GUIDE.
 
 ## Contributing
 
-Solo-maintained portfolio/demo repo — not actively seeking external contributions, but issues and questions are welcome via [GitHub Issues](https://github.com/Codemonster808/agentic-claims-copilot/issues). See [`CODEOWNERS`](CODEOWNERS) and [`SECURITY.md`](SECURITY.md) for how reports are handled.
+Solo-maintained portfolio/demo repo — not actively seeking external contributions, but issues and questions are welcome via [GitHub Issues](https://github.com/santiago-ven-ai/agentic-claims-copilot/issues). See [`CODEOWNERS`](CODEOWNERS) and [`SECURITY.md`](SECURITY.md) for how reports are handled.
 
 ## License
 
-[MIT](LICENSE) © Codemonster808
+[MIT](LICENSE) © santiago-ven-ai
