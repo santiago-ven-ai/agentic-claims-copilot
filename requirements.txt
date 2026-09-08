@@ -284,14 +284,14 @@ py4j==0.10.9.9
     # via pyspark
 pybase64==1.5.0
     # via chromadb
-pydantic==2.13.4
+pydantic==2.13.5
     # via
     #   -r requirements.in
     #   chromadb
     #   fastapi
     #   openai
     #   pydantic-settings
-pydantic-core==2.46.4
+pydantic-core==2.46.5
     # via pydantic
 pydantic-settings==2.15.0
     # via chromadb
