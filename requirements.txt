@@ -21,6 +21,7 @@ anyio==4.14.2
     #   httpx
     #   httpx2
     #   openai
+    #   pinecone
     #   starlette
     #   watchfiles
 attrs==26.1.0
@@ -265,7 +266,7 @@ parse==1.22.1
     #   pytest-bdd
 parse-type==0.6.6
     # via pytest-bdd
-pinecone==9.1.0
+pinecone==10.0.0
     # via -r requirements.in
 pluggy==1.6.0
     # via
