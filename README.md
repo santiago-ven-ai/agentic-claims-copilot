@@ -129,16 +129,7 @@ Both precision numbers are modest in absolute terms (0.13–0.17, not 0.8+). Tha
 3. **A loop that doesn't diverge** — backoff, repeated-query detection, a hard cutoff. An agent that retries indefinitely is a cost bug, not a feature.
 4. **Permanent vs. transient failure classification on the LLM call itself** — not every failure deserves a retry. A malformed/rejected request (`PermanentLLMError`) goes straight to the DLQ; a timeout-shaped error (`TransientLLMError`) gets bounded retries with exponential backoff first. `LLM_PROVIDER=fake-flaky` simulates both deterministically — see `docs/RUNBOOK.md`.
 
-## Installation
-
-```bash
-git clone https://github.com/santiago-ven-ai/agentic-claims-copilot.git
-cd agentic-claims-copilot
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements-dev.txt   # app deps + lint/type/security tooling
-```
-
-## Usage — Demo (3 minutes)
+## Demo (3 minutes)
 
 ```bash
 source env.sh
@@ -146,16 +137,6 @@ make demo          # bootstrap MiniStack, 20 policies + 10 claims, index into Ch
 make eval          # LLM_PROVIDER=fake by default (free); export LLM_PROVIDER=minimax for real numbers
 cat docs/eval-agentic.json
 ```
-
-## Testing
-
-```bash
-make test                     # unit + integration + BDD (pytest-bdd), against real MiniStack
-make e2e                      # full pipeline, emits benchmarks/quality-report.json
-.venv/bin/pre-commit run --all-files   # ruff, mypy, whitespace/EOF checks
-```
-
-CI (`.github/workflows/ci.yml`) runs the same suite on every push, plus an isolated `security` job (`pip-audit`, with two chromadb CVEs explicitly suppressed — see the job's own comment for why they don't apply to `PersistentClient` mode) and a coverage gate that fails the build under the threshold on the badge above.
 
 ## Learn by running
 
@@ -168,11 +149,3 @@ Not "chat with your PDF." Without the loop, the budget, the eval harness, and th
 ## Build it yourself
 
 See [`docs/RUNBOOK.md`](docs/RUNBOOK.md) to run the flow, or [`docs/BUILD_GUIDE.md`](docs/BUILD_GUIDE.md) to build from scratch.
-
-## Contributing
-
-Solo-maintained portfolio/demo repo — not actively seeking external contributions, but issues and questions are welcome via [GitHub Issues](https://github.com/santiago-ven-ai/agentic-claims-copilot/issues). See [`CODEOWNERS`](CODEOWNERS) and [`SECURITY.md`](SECURITY.md) for how reports are handled.
-
-## License
-
-[MIT](LICENSE) © santiago-ven-ai
